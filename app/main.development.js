@@ -1,5 +1,6 @@
 import { app, BrowserWindow, Menu, shell } from 'electron';
 
+
 let menu;
 let template;
 let mainWindow = null;
@@ -74,6 +75,7 @@ app.on('ready', async () => {
       }]).popup(mainWindow);
     });
   }
+  mainWindow.openDevTools();
 
   if (process.platform === 'darwin') {
     template = [{

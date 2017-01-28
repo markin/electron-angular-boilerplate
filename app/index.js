@@ -1,18 +1,19 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router, hashHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
-import routes from './routes';
-import configureStore from './store/configureStore';
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+
 import './app.global.css';
 
-const store = configureStore();
-const history = syncHistoryWithStore(hashHistory, store);
+import {routeConfig} from './routes';
 
-render(
-  <Provider store={store}>
-    <Router history={history} routes={routes} />
-  </Provider>,
-  document.getElementById('root')
-);
+import './components/home.component';
+import './components/test.component';
+
+angular.module('app', [uiRouter, 'app.home', 'app.test']).config(routeConfig);
+
+angular.element(document)
+  .ready(() => {
+    angular.bootstrap(document, ['app'], {
+      strictDi: true
+    });
+    console.log("Ready");
+  });

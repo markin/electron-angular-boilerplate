@@ -1,14 +1,24 @@
-// @flow
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
-import App from './containers/App';
-import HomePage from './containers/HomePage';
-import CounterPage from './containers/CounterPage';
+'use strict';
 
+import './components/home.component';
+import './components/test.component';
 
-export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={HomePage} />
-    <Route path="/counter" component={CounterPage} />
-  </Route>
-);
+routeConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+export function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+  'ngInject';
+
+  $locationProvider.html5Mode({
+    requireBase: false
+  });
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+    .state('home', {
+      url: '/',
+      template: '<home></home>'
+    })
+    .state('test', {
+      url: '/test',
+      template: '<test></test>'
+    });
+}
