@@ -7,7 +7,7 @@ export class View1Controller {
 
   /*@ngInject*/
   constructor($scope) {
-    console.log("view 1")
+    console.log("view 1");
   }
 
 }
