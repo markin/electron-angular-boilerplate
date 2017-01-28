@@ -1,7 +1,7 @@
 'use strict';
 
-import './components/home.component';
-import './components/test.component';
+import './components/view1.component';
+import './components/view2.component';
 
 routeConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 export function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -13,12 +13,12 @@ export function routeConfig($stateProvider, $urlRouterProvider, $locationProvide
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('home', {
+    .state('view1', {
       url: '/',
-      template: '<home></home>'
+      template: '<view1></view1>'
     })
-    .state('test', {
-      url: '/test',
-      template: '<test></test>'
+    .state('view2', {
+      url: '/view2',
+      template: '<view2></view2>'
     });
 }

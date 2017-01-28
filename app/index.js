@@ -5,10 +5,10 @@ import './app.global.css';
 
 import {routeConfig} from './routes';
 
-import './components/home.component';
-import './components/test.component';
+import './components/view1.component';
+import './components/view2.component';
 
-angular.module('app', [uiRouter, 'app.home', 'app.test']).config(routeConfig);
+angular.module('app', [uiRouter, 'app.view1', 'app.view2']).config(routeConfig);
 
 angular.element(document)
   .ready(() => {
