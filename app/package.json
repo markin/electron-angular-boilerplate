@@ -5,9 +5,9 @@
   "description": "Electron application boilerplate based on Angular, UI Router, Webpack",
   "main": "./main.js",
   "author": {
-    "name": "C. T. Lin",
-    "email": "chentsulin@gmail.com",
-    "url": "https://github.com/chentsulin"
+    "name": "A. Caponi",
+    "email": "alberto.caponi86@gmail.com",
+    "url": "https://github.com/markin"
   },
   "license": "MIT",
   "dependencies": {}
