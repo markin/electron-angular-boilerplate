@@ -6,13 +6,13 @@ import angular from "angular";
 export class View2Controller {
 
   /*@ngInject*/
-  constructor() {
+  constructor($scope) {
     console.log("view 2")
   }
 
 }
 
-export default angular.module('app.view2', [])
+export default angular.module('view2', [])
   .component('view2', {
     template: require('./view2.html'),
     controller: View2Controller

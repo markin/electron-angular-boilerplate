@@ -36,5 +36,5 @@ export default validate({
 
   plugins: [],
 
-  externals: Object.keys(externals || {})
+  externals: Object.keys(externals || {}),
 });

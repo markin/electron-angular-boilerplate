@@ -1,15 +1,14 @@
 /**
  * Build config for electron 'Renderer Process' file
  */
-
-import path from 'path';
-import webpack from 'webpack';
-import validate from 'webpack-validator';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import merge from 'webpack-merge';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from "path";
+import webpack from "webpack";
+import validate from "webpack-validator";
+import ExtractTextPlugin from "extract-text-webpack-plugin";
+import merge from "webpack-merge";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 import BabiliPlugin from 'babili-webpack-plugin';
-import baseConfig from './webpack.config.base';
+import baseConfig from "./webpack.config.base";
 
 export default validate(merge(baseConfig, {
   devtool: 'cheap-module-source-map',
@@ -42,11 +41,11 @@ export default validate(merge(baseConfig, {
       },
 
       // Fonts
-      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
-      { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
+      {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
+      {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
 
       // Images
       {
@@ -56,8 +55,8 @@ export default validate(merge(baseConfig, {
       {
         test: /\.html$/,
         loader: 'raw'
-      }
-    ]
+      },
+    ],
   },
 
   plugins: [
@@ -88,7 +87,7 @@ export default validate(merge(baseConfig, {
       babili: ['babel-preset-babili', { deadcode: false }],
     }),
 
-    new ExtractTextPlugin('style.css', { allChunks: true }),
+    new ExtractTextPlugin('style.css', {allChunks: true}),
 
     /**
      * Dynamically generate index.html page

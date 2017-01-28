@@ -1,9 +1,5 @@
 'use strict';
 
-import './components/view1.component';
-import './components/view2.component';
-
-routeConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 export function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   'ngInject';
 
