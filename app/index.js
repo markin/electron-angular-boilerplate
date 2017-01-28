@@ -12,7 +12,7 @@ import {routeConfig} from "./routes";
 import "./components/view1.component";
 import "./components/view2.component";
 
-angular.module('bmd_app', [uiRouter, 'ui.bootstrap', 'formly', 'formlyBootstrap', 'angular-electron', 'view1', 'view2'])
+angular.module('electron_app', [uiRouter, 'ui.bootstrap', 'formly', 'formlyBootstrap', 'angular-electron', 'view1', 'view2'])
   .config(routeConfig)
   .run(
     function (app) {
@@ -24,7 +24,7 @@ angular.module('bmd_app', [uiRouter, 'ui.bootstrap', 'formly', 'formlyBootstrap'
 
 angular.element(document)
   .ready(() => {
-    angular.bootstrap(document, ['bmd_app'], {
+    angular.bootstrap(document, ['electron_app'], {
       strictDi: true
     });
   });
